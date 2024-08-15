@@ -14,9 +14,13 @@ function Movie() {
       // console.log(movieData)
   } , [])
 
-//  console.log(movie.genres)
+  // console.log(movie)
+  console.log(movieId)
 
-  const genreElements = movie.genres.map(movieGenre => {
+ console.log(movie.genres)
+//  const genres = movie.genres
+
+  const genreElements = movie.genres.map((movieGenre) => {
     // console.log(movieGenre)
     return <span>{movieGenre}</span>
   })
@@ -29,7 +33,7 @@ function Movie() {
       <main>
        <h1>{movie.title}</h1>
        <p>{movie.time}</p>
-       <div>{genreElements}</div>
+       {/* <div>{genreElements}</div> */}
       </main>
     </>
   );
