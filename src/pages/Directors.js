@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
+import NavBar from "../components/NavBar";
 
 function Directors() {
+  const [directors, setDirectors] = ([])
+
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        <NavBar/>
       </header>
+      <h1>Directors Page</h1>
       <main>
         {/* Director info here! */}
       </main>

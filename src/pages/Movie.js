@@ -11,14 +11,25 @@ function Movie() {
     fetch(`http://localhost:4000/movies/${movieId}`)
       .then(response => response.json())
       .then(movieData => setMovie(movieData))
+      // console.log(movieData)
+  } , [])
+
+//  console.log(movie.genres)
+
+  const genreElements = movie.genres.map(movieGenre => {
+    // console.log(movieGenre)
+    return <span>{movieGenre}</span>
   })
+
   return (
     <>
       <header>
         <NavBar />
       </header>
       <main>
-        {movie.title}
+       <h1>{movie.title}</h1>
+       <p>{movie.time}</p>
+       <div>{genreElements}</div>
       </main>
     </>
   );
